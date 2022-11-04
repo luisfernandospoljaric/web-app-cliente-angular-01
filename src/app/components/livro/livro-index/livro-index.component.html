@@ -1,0 +1,38 @@
+<h1 class="w3-blue">Lista de livros</h1>
+<form class="w3-margin">
+    <label>Id: </label>
+    <input type="number" id="txtId" name="ID" [(ngModel)]="Livro.Id" class="w3-border w3-round">
+    <label>Titulo: </label>
+    <input type="text" id="txtTitulo" class="w3-border w3-round">
+    <button type="button" id="btnPesquisar" class="w3-btn w3-blue" (click)="pesquisar()">Pesquisar</button>
+    <button type="button" id="btnNovo" class="w3-btn w3-blue" (click)="novo()">Novo</button>
+</form>
+<table id="tbLivros" class="w3-table-all"> 
+    <thead>
+        <tr>
+            <th class="w3-center">Id</th>
+            <th class="w3-center">Título</th>
+            <th class="w3-center">Autor</th>
+            <th class="w3-center">Páginas</th>
+        </tr>
+    </thead>   
+    <tbody *ngIf="Livros.length > 0 else listaVazia">
+    <tr *ngFor="let livro of Livros">
+        <td class="w3-center"><a routerLink="/livros/livros-edit/{{livro.Id}}">{{livro.Id}}</a></td>
+        <td>{{livro.Titulo}}</td>
+        <td>{{livro.Autor}}</td>
+        <td class="w3-right">{{livro.NumeroDePaginas}}</td>
+        <td><a style="cursor:pointer" (click)="excluir(livro.Id)">Excluir</a></td>
+    </tr>    
+</tbody>
+</table>
+
+<ng-template #listaVazia>
+    <tbody>
+        <Tr>
+            <td colspan="4" class="w3-center">
+                Nenhum livro encontrado.
+            </td>
+        </Tr>
+    </tbody>
+</ng-template>

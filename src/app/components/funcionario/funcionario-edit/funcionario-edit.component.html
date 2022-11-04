@@ -1,0 +1,14 @@
+<h1 class="w3-blue">Editar Funcionario</h1>
+<form class="w3-margin">
+    <input type="hidden" id="hddId">
+    <div>
+        <label>Nome: </label><input type="text" name="Nome" [(ngModel)]="Funcionario.Nome" class="w3-input w3-border w3-round">
+    </div>
+    <div>
+        <label>Data de nascimento: </label><input type="date" name="DataNascimento" [(ngModel)]="Funcionario.DataNascimento" class="w3-input w3-border w3-round">
+    </div>
+    <div class="w3-padding">
+        <button type="button" id="btnSalvar" class="w3-btn w3-blue" (click)="salvar()">Salvar</button>
+        <button type="button" id="btnVoltar" class="w3-btn w3-blue" (click)="voltar()">Voltar</button>
+    </div>
+</form>

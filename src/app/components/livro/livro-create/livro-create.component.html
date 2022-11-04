@@ -1,0 +1,17 @@
+<h1 class="w3-blue">Cadastro de livro</h1>
+    <form class="w3-margin">
+        <div>
+            <label>Título: </label><input type="text" name="Titulo" [(ngModel)]="Livro.Titulo" class="w3-input w3-border w3-round">
+        </div>
+        <div>
+            <label>Autor: </label><input type="text" name="Autor" [(ngModel)]="Livro.Autor" class="w3-input w3-border w3-round">
+        </div>
+        <div>
+            <label>Páginas: </label><input type="number" name="NumeroDePaginas" [(ngModel)]="Livro.NumeroDePaginas" class="w3-input w3-border w3-round">
+        </div>
+        <div class="w3-padding">
+            <button type="button" id="btnSalvar" class="w3-btn w3-blue" (click)="salvar()">Salvar</button>
+            <button type="button" id="btnVoltar" class="w3-btn w3-blue" (click)="voltar()">Voltar</button>
+        </div>
+    </form>
+    <app-mensagem-alert></app-mensagem-alert>
