@@ -5,6 +5,8 @@ import { take } from 'rxjs';
 import { Livro } from 'src/app/models/livro';
 import { LivroService } from 'src/app/services/livro/livro.service';
 
+//Luizao doidera
+
 @Component({
   selector: 'app-livro-index',
   templateUrl: './livro-index.component.html',
