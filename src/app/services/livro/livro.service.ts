@@ -37,4 +37,8 @@ export class LivroService {
   delete(id: number): Observable<Livro>{
     return this.httpClient.delete<Livro>(this.url+"/"+id);
   }
+
+  testando(){
+    
+  }
 }
